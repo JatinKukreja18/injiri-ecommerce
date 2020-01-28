@@ -8,7 +8,6 @@ const Home = () => {
   // const { data, loading, error } = useQuery(JOBS_QUERY);
 
   const { data, loading, error } = useQuery(FEATURED_QUERY);
-  const products = data.products.nodes;
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -24,7 +23,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ul>
-        {products.map(job => {
+        {data.products.nodes.map(job => {
           return <li key={`job__${job.id}`}>{job.name}</li>;
         })}
       </ul>

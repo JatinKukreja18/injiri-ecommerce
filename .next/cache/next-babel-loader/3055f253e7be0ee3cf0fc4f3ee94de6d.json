@@ -1,0 +1,1 @@
+{"ast":null,"code":"import gql from 'graphql-tag';\nconst JOBS_QUERY = gql`\n  query Jobs {\n    jobs {\n      id\n      title\n    }\n  }\n`;\nexport default JOBS_QUERY;","map":null,"metadata":{},"sourceType":"module"}

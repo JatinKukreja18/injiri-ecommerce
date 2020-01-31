@@ -27,8 +27,8 @@ const ProductsList = ({ products }) => {
 						<div className="row">
 						{
 							products.map( item => (
-								<div className="col-sm-4">
-								<div className="product-container mb-5" key={item.id}>
+								<div className="col-sm-4" key={item.id}>
+								<div className="product-container mb-5" >
 									<Link as={`/product/${item.slug}-${item.productId}`} href={`/product?slug=${item.slug}-${item.productId}`}>
 										<a>
 											<span className="product-link">

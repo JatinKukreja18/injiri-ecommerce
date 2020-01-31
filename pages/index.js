@@ -6,6 +6,8 @@ import JOBS_QUERY from '../graphql/jobs.query';
 import PRODUCTS_QUERY from "../graphql/products.query";
 import Hero from '../components/home/Hero';
 import ProductsList from '../components/home/ProductsList';
+
+
 // const Home = () => {
 //   // Create a query hook
 //   // const { data, loading, error } = useQuery(JOBS_QUERY);
@@ -58,7 +60,7 @@ const Index = ( props ) => {
 		<Layout>
       <Head>
         <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 			<Hero products={data.products.nodes}/>
 			{/*<Categories/>*/}

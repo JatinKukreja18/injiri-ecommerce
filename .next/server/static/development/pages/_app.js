@@ -1719,10 +1719,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util_apollo_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/apollo-client */ "./util/apollo-client.js");
+/* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/style.css */ "./public/style.css");
+/* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_common_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/common.css */ "./public/common.css");
+/* harmony import */ var _public_common_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_common_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _util_apollo_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/apollo-client */ "./util/apollo-client.js");
 
 var _jsxFileName = "/Users/kukreja/Projects/Freelance/injiri-ecommerce/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
 
 
 
@@ -1739,13 +1745,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       client: apollo,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       },
       __self: this
     })));
@@ -1754,7 +1760,29 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 } // Wraps all components in the tree with the data provider
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_util_apollo_client__WEBPACK_IMPORTED_MODULE_4__["default"])(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_util_apollo_client__WEBPACK_IMPORTED_MODULE_6__["default"])(MyApp));
+
+/***/ }),
+
+/***/ "./public/common.css":
+/*!***************************!*\
+  !*** ./public/common.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./public/style.css":
+/*!**************************!*\
+  !*** ./public/style.css ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 

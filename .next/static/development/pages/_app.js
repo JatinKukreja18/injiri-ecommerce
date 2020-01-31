@@ -23713,7 +23713,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var _util_apollo_client__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../util/apollo-client */ "./util/apollo-client.js");
+/* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/style.css */ "./public/style.css");
+/* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_style_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _public_common_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/common.css */ "./public/common.css");
+/* harmony import */ var _public_common_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_common_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _util_apollo_client__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../util/apollo-client */ "./util/apollo-client.js");
 
 
 
@@ -23722,6 +23726,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/kukreja/Projects/Freelance/injiri-ecommerce/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
 
 
 
@@ -23749,13 +23755,13 @@ function (_App) {
         client: apollo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 13
         },
         __self: this
       }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 14
         },
         __self: this
       })));
@@ -23766,7 +23772,7 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_7___default.a); // Wraps all components in the tree with the data provider
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_util_apollo_client__WEBPACK_IMPORTED_MODULE_9__["default"])(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_util_apollo_client__WEBPACK_IMPORTED_MODULE_11__["default"])(MyApp));
 
 /***/ }),
 
@@ -23824,5 +23830,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./","static/runtime/webpack.js"]]]);
+},[["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./","static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=_app.js.map

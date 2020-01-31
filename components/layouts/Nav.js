@@ -1,16 +1,16 @@
 import Link from "next/link";
 import CartIcon from "../cart/CartIcon";
 import Menu from "./Menu";
-
+import './nav.css';
 const Nav = (props) => {
 	return (
-		
+
 		<header className={ props.scrolled ? 'i-header scrolled ' + props.scrollDirection :'i-header'}>
 			<div className="i-wrapper flex jsb w-100">
 				<Link href="/">
 					<div className="logoContainer">
 						<a  className="custom-logo-link ">
-							<img src="../../static/images/logo-black.png" alt=""/>
+							<img src="../../public/images/logo-black.png" alt=""/>
 						</a>
 					</div>
 				</Link>

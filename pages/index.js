@@ -6,7 +6,7 @@ import JOBS_QUERY from '../graphql/jobs.query';
 import PRODUCTS_QUERY from "../graphql/products.query";
 import Hero from '../components/home/Hero';
 import ProductsList from '../components/home/ProductsList';
-
+import Login from './login';
 
 // const Home = () => {
 //   // Create a query hook
@@ -47,14 +47,14 @@ const Index = ( props ) => {
 
 	const { products, featuredProducts } = props;
 	console.log(featuredProducts);
-  const { data, loading, error } = useQuery(PRODUCTS_QUERY);
-    if (loading) {
-      return <p>Loading...</p>;
-    }
+  // const { data, loading, error } = useQuery(PRODUCTS_QUERY);
+    // if (loading) {
+    //   return <p>Loading...</p>;
+    // }
 
-    if (error) {
-      return <p>Error: {JSON.stringify(error)}</p>;
-    }
+    // if (error) {
+    //   return <p>Error: {JSON.stringify(error)}</p>;
+    // }
 
 	return (
 		<Layout>
@@ -62,10 +62,10 @@ const Index = ( props ) => {
         <title>Home</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-			<Hero products={data.products.nodes}/>
+			{/* <Hero products={data.products.nodes}/> */}
 			{/*<Categories/>*/}
 
-			<ProductsList products={ data.products.nodes } />
+			{/* <ProductsList products={ data.products.nodes } /> */}
 		</Layout>
 	);
 };

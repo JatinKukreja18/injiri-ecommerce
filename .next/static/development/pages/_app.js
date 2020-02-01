@@ -23724,7 +23724,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/kukreja/Projects/Freelance/injiri-ecommerce/pages/_app.js";
+var _jsxFileName = "/home/user/workspace/learning/injiri-ecommerce/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
@@ -23798,11 +23798,13 @@ __webpack_require__.r(__webpack_exports__);
 
  // Update the GraphQL endpoint to any instance of GraphQL that you like
 
-var GRAPHQL_URL = 'http://localhost:8888/injiri/graphql';
+var GRAPHQL_URL_PROD = 'http://localhost:8888/injiri/graphql';
+var GRAPHQL_URL_DEV = 'http://testo.local/index.php?graphql';
 var link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_3__["createHttpLink"])({
   fetch: isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default.a,
   // Switches between unfetch & node-fetch for client & server.
-  uri: GRAPHQL_URL
+  uri: GRAPHQL_URL_DEV,
+  credentials: 'same-origin'
 }); // Export a HOC from next-with-apollo
 // Docs: https://www.npmjs.com/package/next-with-apollo
 

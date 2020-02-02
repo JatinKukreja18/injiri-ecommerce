@@ -47,42 +47,30 @@ const Index = ( props ) => {
 
 	const { products, featuredProducts } = props;
 	console.log(featuredProducts);
-  // const { data, loading, error } = useQuery(PRODUCTS_QUERY);
-    // if (loading) {
-    //   return <p>Loading...</p>;
-    // }
+  const { data, loading, error } = useQuery(PRODUCTS_QUERY);
+    if (loading) {
+      return <p>Loading...</p>;
+    }
 
-    // if (error) {
-    //   return <p>Error: {JSON.stringify(error)}</p>;
-    // }
-
+    if (error) {
+      return <p>Error: {JSON.stringify(error)}</p>;
+    }
+  console.log({data});
+  
 	return (
 		<Layout>
       <Head>
         <title>Home</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 			{/* <Hero products={data.products.nodes}/> */}
 			{/*<Categories/>*/}
 
-			{/* <ProductsList products={ data.products.nodes } /> */}
+			{data ? <ProductsList products={ data.products.nodes } />: ''}
 		</Layout>
 	);
 };
 
-// Index.getInitialProps = async () => {
 
-// 	// const result = await client.query({
-// 	// 	query: PRODUCTS_QUERY
-// 	// });
-// 	// const featuredResult = await client.query({
-// 	// 	query: FEATURED_QUERY
-// 	// });
-//   const { data, loading, error } = useQuery(PRODUCTS_QUERY);
-
-// 	return {
-// 		products: data.products.nodes
-// 	}
-// };
 
 export default Index;

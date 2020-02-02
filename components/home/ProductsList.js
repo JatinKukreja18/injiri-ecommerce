@@ -32,7 +32,7 @@ const ProductsList = ({ products }) => {
 									<Link as={`/product/${item.slug}-${item.productId}`} href={`/product?slug=${item.slug}-${item.productId}`}>
 										<a>
 											<span className="product-link">
-												<img className="product-image" src={item.image.sourceUrl} srcSet={item.image.srcSet} alt={ item.name }/>
+												{item.image && <img className="product-image" src={item.image.sourceUrl} srcSet={item.image.srcSet} alt={ item.name }/>}
 												<h5 className="product-name">{item.name}</h5>
 												<p className="product-price">{item.price}</p>
 											</span>

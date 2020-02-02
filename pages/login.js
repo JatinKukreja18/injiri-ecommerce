@@ -3,10 +3,10 @@ import { useState } from 'react';
 import LOGIN_USER from '../graphql/login.mutation';
 import { useMutation } from '@apollo/react-hooks';
 import MessageAlert from '../components/message-alert/MessageAlert';
-// import config from '../client-config';
-// import Router from 'next/router';
-// import { isUserValidated } from '../utils/auth-functions';
-// import isEmpty from '../validator/isEmpty';
+import config from '../client-config';
+import Router from 'next/router';
+import { isUserValidated } from '../util/auth-functions';
+import isEmpty from '../validator/isEmpty';
 // import Link from 'next/link';
 
 const Login = () => {
@@ -18,6 +18,18 @@ const Login = () => {
 
   const [login, { data, error }] = useMutation(LOGIN_USER);
 
+  // Check if the user is validated already.
+	if (process.browser) {
+
+		const userValidated = isUserValidated();
+
+		// If user is already validated, redirect user to My Account page.
+		if (!isEmpty(userValidated)) {
+			Router.push('/my-account')
+		}
+
+    }
+    
   /**
    * Hide the Status bar on cross button click.
    *
@@ -28,6 +40,32 @@ const Login = () => {
     setErrorMessage('');
   };
 
+  	/**
+	 * Handle Login success.
+	 *
+	 * @param {Object} response Response received
+	 *
+	 * @return {void}
+	 */
+	const handleLoginSuccess = (response) => {
+
+		if (response.login.authToken) {
+
+			// Set the authtoken, user id and username in the localStorage.
+			localStorage.setItem(config.authTokenName, JSON.stringify(response.login));
+      localStorage.setItem(config.userDetails, JSON.stringify(response.login.user))
+			// Set form field vaues to empty.
+			// setErrorMessage('');
+			// setUsername('');
+			// setPassword('');
+
+			// Send the user to My Account page on successful login.
+			Router.push('/my-account');
+
+		}
+
+	};
+
 //   con    sole.log({error: error.graphQLErrors[0].message});
   
   return (
@@ -35,7 +73,6 @@ const Login = () => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          console.log({ username, password });
           login({ variables: { username, password } });
         }}
       >
@@ -70,6 +107,7 @@ const Login = () => {
         ) : (
           ''
         )}
+        {data ? handleLoginSuccess(data) : ''}
       </form>
     </div>
   );

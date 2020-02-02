@@ -7,5 +7,7 @@ const config = {
 	graphqlUrl: 'http://localhost:8888/injiri/graphql',
 	postCodeLocale: 'IN',
 	authTokenName: 'wp-decoupled/user' ,
+	userDetails:'injiri/user'
+
 };
 export default config;

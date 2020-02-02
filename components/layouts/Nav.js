@@ -1,8 +1,30 @@
-import Link from "next/link";
+
+import { Menu , Dropdown, Icon } from 'antd';
+import "antd/dist/antd.css";
 import CartIcon from "../cart/CartIcon";
-import Menu from "./Menu";
+import NextMenu from "./Menu";
 import './nav.css';
+import Link from 'next/link';
+import { useContext, useState } from 'react';
+import { AppContext } from "./../context/AppContext";
+import CartMini from "../cart/cart-page/CartMini";
+
+
+
+  
 const Nav = (props) => {
+	const menu = (
+		<Menu>
+			{/* {cartList.map( (item, index) => 
+				(<Menu.Item key ={index}>
+					{item.name}
+				</Menu.Item>))} */}
+				<CartMini/>
+		  {/* <Menu.Item>
+			<button>Proceed to checkout</button>
+		  </Menu.Item> */}
+		</Menu>
+	  );
 	return (
 
 		<header className={ props.scrolled ? 'i-header scrolled ' + props.scrollDirection :'i-header'}>
@@ -15,7 +37,7 @@ const Nav = (props) => {
 					</div>
 				</Link>
 				<nav className="i-header-options">
-				<Menu/>
+				<NextMenu/>
 				{/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
 						aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 				</button> */}
@@ -24,7 +46,13 @@ const Nav = (props) => {
 
 				</div> */}
 				<div className="cart">
+
 					<CartIcon />
+					<Dropdown overlay={menu}>
+    <a className="ant-dropdown-link" >
+     Mini Cart <Icon type="down" />
+    </a>
+  </Dropdown>
 				</div>
 				</nav>
 			</div>

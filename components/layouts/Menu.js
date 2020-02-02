@@ -3,7 +3,7 @@ import { isUserValidated, logoutUser } from "../../util/auth-functions";
 import { useEffect, useState } from 'react';
 import isEmpty from "../../validator/isEmpty";
 
-const Menu = () => {
+const NextMenu = () => {
 
 	const [ loggedIn, setLoggedIn ] = useState( false );
 
@@ -50,4 +50,4 @@ const Menu = () => {
 	)
 };
 
-export default Menu;
+export default NextMenu;
